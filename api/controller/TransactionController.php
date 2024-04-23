@@ -1,5 +1,6 @@
 <?php
 require_once(__DIR__ . '/../config/config.php');
+require_once(__DIR__ . '/../config/validator.php');
 require_once(__DIR__ . '/../model/TransactionModel.php');
 
 class TransactionController {
