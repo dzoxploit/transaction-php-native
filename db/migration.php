@@ -2,7 +2,7 @@
 // File: migration.php
 
 // Load database configuration
-require_once('api/config/config.php');
+require_once('../api/config/config.php');
 
 // Connect to the database
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);

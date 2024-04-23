@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "c479338d-6162-4b85-9220-d9a4680f6819",
+		"name": "transaction-php",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3583815"
+	},
+	"item": [
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"invoice_id\": \"INV123\",\r\n\t\"item_name\": \"Product A\",\r\n\t\"amount\": 100.00,\r\n\t\"payment_type\": \"virtual_account\",\r\n\t\"customer_name\": \"John Doe\",\r\n\t\"merchant_id\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/transaction-php/api/create_transaction.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"transaction-php",
+						"api",
+						"create_transaction.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/transaction-php/api/check_transaction.php?merchant_id=1&references_id=6627a93fa8230",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"transaction-php",
+						"api",
+						"check_transaction.php"
+					],
+					"query": [
+						{
+							"key": "merchant_id",
+							"value": "1"
+						},
+						{
+							"key": "references_id",
+							"value": "6627a93fa8230"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
