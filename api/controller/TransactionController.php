@@ -12,6 +12,12 @@ class TransactionController {
 
     // Method untuk membuat transaksi pembayaran
     public function createTransaction($data) {
+         // Validasi input data
+        $validator = new Validator($data);
+        $validator->required(['invoice_id', 'item_name', 'amount', 'payment_type', 'customer_name', 'merchant_id']);
+        if ($validator->hasErrors()) {
+            return ['error' => 'All fields are required.'];
+        }
         // Validasi input data (contoh sederhana, sesuaikan dengan kebutuhan)
         if(empty($data['invoice_id']) || empty($data['item_name']) || empty($data['amount']) || empty($data['payment_type']) || empty($data['customer_name']) || empty($data['merchant_id'])) {
             return ['error' => 'All fields are required.'];
