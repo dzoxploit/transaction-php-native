@@ -30,6 +30,13 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi ini:
    php migration.php
    ```
 
+   Untuk menjalankan seeder data dummy kurang lebih sama seperti diatas hanya saja beda di file seeder.php
+
+   ```bash
+   cd db
+   php seeder.php
+   ```
+
 7. Setelah migrasi selesai, Anda dapat menjalankan aplikasi menggunakan perintah berikut:
 
    ```bash
